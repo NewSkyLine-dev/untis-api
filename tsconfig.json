@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        /* Modern TypeScript Settings */
+        "target": "ES2022" /* Use modern JavaScript features */,
+        "module": "NodeNext" /* Modern module system */,
+        "moduleResolution": "NodeNext" /* Modern module resolution */,
+        "esModuleInterop": true /* Better interop between different module systems */,
+        "forceConsistentCasingInFileNames": true /* Case sensitivity for imports */,
+        "strict": true /* Enable all strict type checking options */,
+        "skipLibCheck": true /* Skip type checking of declaration files */,
+
+        /* Additional Modern Features */
+        "allowImportingTsExtensions": true /* Allow imports with .ts extensions */,
+        "resolveJsonModule": true /* Enable importing JSON files */,
+        "sourceMap": true /* Generate source maps for debugging */,
+        "outDir": "./dist" /* Output directory for compiled files */,
+        "noEmit": true /* Don't emit files (useful when using bundlers) */,
+
+        /* Type Checking */
+        "noUnusedLocals": true /* Error on unused local variables */,
+        "noUnusedParameters": true /* Error on unused parameters */,
+        "noFallthroughCasesInSwitch": true /* Ensure switch cases are handled */,
+        "noImplicitOverride": true /* Require explicit override keyword */
+    },
+    "include": ["src/**/*"] /* Specify files to include */,
+    "exclude": ["node_modules", "dist"] /* Specify files to exclude */
+}

@@ -1,0 +1,2894 @@
+{
+    "$schema": "./test.schema.json",
+    "days": [
+        {
+            "date": "2025-02-10",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        5323878
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T07:50",
+                        "end": "2025-02-10T08:40"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KB",
+                                "longName": "KREBS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "D",
+                                "longName": "DEUTSCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        4914265
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T08:40",
+                        "end": "2025-02-10T09:30"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KB",
+                                "longName": "KREBS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "E1",
+                                "longName": "ENGLISCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5329505
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T09:35",
+                        "end": "2025-02-10T10:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 3,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "WEB",
+                                "longName": "WEBER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "DSAI_1",
+                                "longName": "DATA SCIENCE UND ARTIFICAL INTELLIGENCE"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5094719
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T10:35",
+                        "end": "2025-02-10T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 4,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BEC",
+                                "longName": "BERNER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "BWM_3",
+                                "longName": "BETRIEBSWIRTSCHAFT UND MANAGEMENT"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5171793
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T11:30",
+                        "end": "2025-02-10T12:20"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BUM",
+                                "longName": "BUDJELAN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "ETH",
+                                "longName": "ETHIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z202",
+                                "longName": "Seminarraum"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5090806,
+                        5090809
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T13:25",
+                        "end": "2025-02-10T15:10"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 6,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "WEB",
+                                "longName": "WEBER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "DBI_1",
+                                "longName": "DATENBANKEN UND INFORMATIONSSYSTEME"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z211",
+                                "longName": "Hopper"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5030949,
+                        5030952
+                    ],
+                    "duration": {
+                        "start": "2025-02-10T15:15",
+                        "end": "2025-02-10T17:00"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 7,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "SCW",
+                                "longName": "SCHERMANN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "POS1",
+                                "longName": "PROGRAMMIEREN UND SOFTWARE ENGINEERING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z210",
+                                "longName": "Ritchie"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        },
+        {
+            "date": "2025-02-11",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        5325548
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T07:50",
+                        "end": "2025-02-11T08:40"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "SG",
+                                "longName": "STEIGER- LECHNER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "GGP",
+                                "longName": "GEOGRAPHIE, GESCHICHTE UND POLITISCHE BILDUNG"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        4914268
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T08:40",
+                        "end": "2025-02-11T09:30"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KB",
+                                "longName": "KREBS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "E1",
+                                "longName": "ENGLISCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5023381
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T09:35",
+                        "end": "2025-02-11T10:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 3,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "SCW",
+                                "longName": "SCHERMANN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "POS1",
+                                "longName": "PROGRAMMIEREN UND SOFTWARE ENGINEERING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        4897387
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T10:35",
+                        "end": "2025-02-11T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 4,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KB",
+                                "longName": "KREBS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "D",
+                                "longName": "DEUTSCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5325101
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T11:30",
+                        "end": "2025-02-11T12:20"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "CANCELLED",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "PRAM",
+                                "longName": "PRATSCHER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "BESP",
+                                "longName": "BEWEGUNG UND SPORT"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "T1",
+                                "longName": "Turnsaal"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5262523
+                    ],
+                    "duration": {
+                        "start": "2025-02-11T12:25",
+                        "end": "2025-02-11T13:15"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 6,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BB",
+                                "longName": "BAUMGARTNER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "BWM_1",
+                                "longName": "BETRIEBSWIRTSCHAFT UND MANAGEMENT"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        },
+        {
+            "date": "2025-02-12",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        5096126
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T07:50",
+                        "end": "2025-02-12T08:40"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BB",
+                                "longName": "BAUMGARTNER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "BWM_1",
+                                "longName": "BETRIEBSWIRTSCHAFT UND MANAGEMENT"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        4979059
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T08:40",
+                        "end": "2025-02-12T09:30"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "FUE",
+                                "longName": "FÜRSTER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "NW2",
+                                "longName": "NATURWISSENSCHAFTEN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5196934
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T09:35",
+                        "end": "2025-02-12T10:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 3,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "FUX",
+                                "longName": "FUXREITER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "NSCS_1",
+                                "longName": "NETZWERKSYSTEME UND CYBER SECURITY"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5329292
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T10:35",
+                        "end": "2025-02-12T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 4,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "PIL",
+                                "longName": "PILHAR"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "WMC_1",
+                                "longName": "WEBPROGRAMMIERUNG UND MOBILE COMPUTING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5171796
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T11:30",
+                        "end": "2025-02-12T12:20"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BUM",
+                                "longName": "BUDJELAN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "ETH",
+                                "longName": "ETHIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5221224
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T13:25",
+                        "end": "2025-02-12T14:15"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 6,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "FUX",
+                                "longName": "FUXREITER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "NSCS_1",
+                                "longName": "NETZWERKSYSTEME UND CYBER SECURITY"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z220",
+                                "longName": "M-Labor"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5221881
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T14:20",
+                        "end": "2025-02-12T15:10"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 7,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "PIL",
+                                "longName": "PILHAR"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "WMC_1",
+                                "longName": "WEBPROGRAMMIERUNG UND MOBILE COMPUTING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z211",
+                                "longName": "Hopper"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5215559,
+                        5326700
+                    ],
+                    "duration": {
+                        "start": "2025-02-12T15:15",
+                        "end": "2025-02-12T17:00"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "CANCELLED",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 8,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "REM",
+                                "longName": "REIS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "SYP1",
+                                "longName": "SYSTEMPLANUNG UND PROJEKTENTWICKLUNG"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        },
+        {
+            "date": "2025-02-13",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        4974271
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T07:50",
+                        "end": "2025-02-13T08:40"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "CANCELLED",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "PRAM",
+                                "longName": "PRATSCHER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "GGP",
+                                "longName": "GEOGRAPHIE, GESCHICHTE UND POLITISCHE BILDUNG"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5036619,
+                        5036622,
+                        5036625
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T08:40",
+                        "end": "2025-02-13T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "FUX",
+                                "longName": "FUXREITER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "SYP1",
+                                "longName": "SYSTEMPLANUNG UND PROJEKTENTWICKLUNG"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z210",
+                                "longName": "Ritchie"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5285792
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T11:30",
+                        "end": "2025-02-13T12:20"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 3,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "SCW",
+                                "longName": "SCHERMANN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "POS1",
+                                "longName": "PROGRAMMIEREN UND SOFTWARE ENGINEERING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5290274
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T12:25",
+                        "end": "2025-02-13T13:15"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 4,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "WEB",
+                                "longName": "WEBER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "DSAI_1",
+                                "longName": "DATA SCIENCE UND ARTIFICAL INTELLIGENCE"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5330925
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T13:25",
+                        "end": "2025-02-13T17:00"
+                    },
+                    "type": "EVENT",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 500,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "BB",
+                                "longName": "BAUMGARTNER"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KB",
+                                "longName": "KREBS"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "RU",
+                                "longName": "RIEDER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "INFO",
+                                "status": "REGULAR",
+                                "shortName": "",
+                                "longName": ""
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": null,
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5275445
+                    ],
+                    "duration": {
+                        "start": "2025-02-13T13:25",
+                        "end": "2025-02-13T14:15"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "CANCELLED",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 500,
+                    "layoutWidth": 500,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "HAS",
+                                "longName": "HACKSTOCK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "AM",
+                                "longName": "ANGEWANDTE MATHEMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        },
+        {
+            "date": "2025-02-14",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        5256506
+                    ],
+                    "duration": {
+                        "start": "2025-02-14T07:50",
+                        "end": "2025-02-14T08:40"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "SCW",
+                                "longName": "SCHERMANN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "POS1",
+                                "longName": "PROGRAMMIEREN UND SOFTWARE ENGINEERING"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        4979062
+                    ],
+                    "duration": {
+                        "start": "2025-02-14T08:40",
+                        "end": "2025-02-14T09:30"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "FUE",
+                                "longName": "FÜRSTER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "NW2",
+                                "longName": "NATURWISSENSCHAFTEN"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z306",
+                                "longName": "Z306"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5290175
+                    ],
+                    "duration": {
+                        "start": "2025-02-14T09:35",
+                        "end": "2025-02-14T10:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 3,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "WEB",
+                                "longName": "WEBER"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "DBI_1",
+                                "longName": "DATENBANKEN UND INFORMATIONSSYSTEME"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5257973
+                    ],
+                    "duration": {
+                        "start": "2025-02-14T10:35",
+                        "end": "2025-02-14T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "CANCELLED",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 4,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "REM",
+                                "longName": "REIS"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "SYP1",
+                                "longName": "SYSTEMPLANUNG UND PROJEKTENTWICKLUNG"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5239806
+                    ],
+                    "duration": {
+                        "start": "2025-02-14T11:30",
+                        "end": "2025-02-14T12:20"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 5,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "HAS",
+                                "longName": "HACKSTOCK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "AM",
+                                "longName": "ANGEWANDTE MATHEMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        },
+        {
+            "date": "2025-02-15",
+            "resourceType": "STUDENT",
+            "resource": {
+                "id": 6110,
+                "shortName": "OppermFab",
+                "longName": "Oppermann",
+                "displayName": ""
+            },
+            "status": "REGULAR",
+            "dayEntries": [],
+            "gridEntries": [
+                {
+                    "ids": [
+                        5238010,
+                        5238013,
+                        5238016,
+                        5238019
+                    ],
+                    "duration": {
+                        "start": "2025-02-15T07:50",
+                        "end": "2025-02-15T11:25"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 1,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHBT",
+                                "longName": "BAUTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHBT",
+                                "longName": "BAUTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4YENZ",
+                                "longName": "AL+KOLLEG ERNEUERBARE ENERGIE, UMWELT UND NACHHALTIGKEIT"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHBTH",
+                                "longName": "BAUTECHNIK-HOCHBAU"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KOM",
+                                "longName": "KOPINITSCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "EBC1",
+                                "longName": "EUROPÄISCHER WIRTSCHAFTSFÜHRERSCHEIN (EBC*L)"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z310",
+                                "longName": "Z310"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                },
+                {
+                    "ids": [
+                        5253974,
+                        5253977
+                    ],
+                    "duration": {
+                        "start": "2025-02-15T11:30",
+                        "end": "2025-02-15T13:15"
+                    },
+                    "type": "NORMAL_TEACHING_PERIOD",
+                    "status": "REGULAR",
+                    "statusDetail": null,
+                    "name": null,
+                    "layoutStartPosition": 0,
+                    "layoutWidth": 1000,
+                    "layoutGroup": 2,
+                    "color": "bfc8cf",
+                    "notesAll": "",
+                    "icons": [],
+                    "position1": [
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHBT",
+                                "longName": "BAUTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4AHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHBT",
+                                "longName": "BAUTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4BHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "4YENZ",
+                                "longName": "AL+KOLLEG ERNEUERBARE ENERGIE, UMWELT UND NACHHALTIGKEIT"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHBTH",
+                                "longName": "BAUTECHNIK-HOCHBAU"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5AHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHET",
+                                "longName": "ELEKTROTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5BHMBA",
+                                "longName": "MB-AUTOMATISIERUNGSTECHNIK"
+                            },
+                            "removed": null
+                        },
+                        {
+                            "current": {
+                                "type": "CLASS",
+                                "status": "REGULAR",
+                                "shortName": "5CHIF",
+                                "longName": "INFORMATIK"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position2": [
+                        {
+                            "current": {
+                                "type": "TEACHER",
+                                "status": "REGULAR",
+                                "shortName": "KOM",
+                                "longName": "KOPINITSCH"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position3": [
+                        {
+                            "current": {
+                                "type": "SUBJECT",
+                                "status": "REGULAR",
+                                "shortName": "EBC1",
+                                "longName": "EUROPÄISCHER WIRTSCHAFTSFÜHRERSCHEIN (EBC*L)"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position4": [
+                        {
+                            "current": {
+                                "type": "ROOM",
+                                "status": "REGULAR",
+                                "shortName": "Z305",
+                                "longName": "Z305"
+                            },
+                            "removed": null
+                        }
+                    ],
+                    "position5": null,
+                    "texts": [],
+                    "lessonText": "",
+                    "lessonInfo": null,
+                    "substitutionText": "",
+                    "userName": null,
+                    "moved": null,
+                    "durationTotal": null,
+                    "link": null
+                }
+            ],
+            "backEntries": []
+        }
+    ],
+    "errors": []
+}
