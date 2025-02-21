@@ -8,6 +8,14 @@
             "runtimeArgs": ["-r", "ts-node/register"],
             "args": ["${workspaceFolder}/src/index.ts"],
             "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug login test",
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${workspaceFolder}/tests/login.test.ts"],
+            "sourceMaps": true
         }
     ]
 }
