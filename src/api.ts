@@ -10,6 +10,7 @@ interface ApiConfig {
 export class Api {
     private apiClient: ApiClient;
     public auth: AuthApi;
+    private credentials?: LoginCredentials;
 
     constructor(config: ApiConfig) {
         this.apiClient = new ApiClient(config.baseUrl, config.school);
@@ -17,6 +18,15 @@ export class Api {
     }
 
     async login(credentials: LoginCredentials) {
+        this.credentials = credentials;
         return this.auth.login(credentials);
+    }
+
+    async logout() {
+        if (!this.credentials) {
+            throw new Error("No credentials provided");
+        }
+
+        return this.auth.logout(this.credentials);
     }
 }

@@ -25,8 +25,26 @@ export class AuthApi {
         }
     }
 
-    async logout(): Promise<void> {
-        await this.apiClient.post("/auth/logout", {});
-        // this.apiClient.setToken(""); // Clear token
+    async logout(credentials: LoginCredentials): Promise<any> {
+        try {
+            const response = await this.apiClient.post(
+                "/WebUntis/jsonrpc.do",
+                {
+                    id: credentials.id,
+                    jsonrpc: credentials.jsonrpc,
+                    method: "logout",
+                    params: {},
+                },
+                {
+                    params: {
+                        school: this.apiClient.school,
+                    },
+                }
+            );
+            return response;
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     }
 }
