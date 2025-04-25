@@ -1,0 +1,21 @@
+{
+  "name": "untis-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest --coverage"
+  },
+  "keywords": [],
+  "author": "Fabian Oppermann",
+  "license": "ISC",
+  "description": "A simple Untis API to get own timetable and exams.",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
+  }
+}
