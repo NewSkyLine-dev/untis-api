@@ -2,14 +2,35 @@
   "name": "untis-api",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
-    "test": "vitest --coverage"
+    "test": "vitest --coverage",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NewSkyLine-dev/untis-api"
+  },
   "author": "Fabian Oppermann",
   "license": "ISC",
   "description": "A simple Untis API to get own timetable and exams.",
+  "keywords": [
+    "untis",
+    "api",
+    "timetable",
+    "school",
+    "webuntis"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.14.1",
     "typescript": "^5.8.3",
