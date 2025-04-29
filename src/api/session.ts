@@ -1,5 +1,5 @@
 import { Exam, Timetable } from "@/models/timetable";
-import { httpClient } from "@/utils/httpClient";
+import { getHttpClient } from "@/utils/httpClient";
 import { logger } from "@/utils/logger";
 import axios from "axios";
 
@@ -10,6 +10,7 @@ export class UntisSession {
     private studentId: string | null = null;
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
+    private httpClient: ReturnType<typeof getHttpClient>;
 
     constructor(
         private server: string,
@@ -18,9 +19,10 @@ export class UntisSession {
         private password: string
     ) {
         this.baseUrl = `https://${server}.webuntis.com/WebUntis/api/`;
-        httpClient.defaults.baseURL = this.baseUrl;
-        httpClient.defaults.headers["Content-Type"] = "application/json";
-        httpClient.defaults.headers["Cookie"] = `schoolname=_${Buffer.from(
+        this.httpClient = getHttpClient();
+        this.httpClient.defaults.baseURL = this.baseUrl;
+        this.httpClient.defaults.headers["Content-Type"] = "application/json";
+        this.httpClient.defaults.headers["Cookie"] = `schoolname=_${Buffer.from(
             school
         ).toString("base64")}`;
     }
@@ -65,7 +67,7 @@ export class UntisSession {
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                         Cookie:
-                            httpClient.defaults.headers["Cookie"] +
+                            this.httpClient.defaults.headers["Cookie"] +
                             `; JSESSIONID=${this.sessionId}`,
                         Accept: "application/json",
                     },
@@ -86,23 +88,23 @@ export class UntisSession {
                         : acc;
                 }, "");
 
-                httpClient.defaults.headers[
+                this.httpClient.defaults.headers[
                     "Cookie"
                 ] = `${cookies}; JSESSIONID=${this.sessionId}`;
             }
 
             // Get authentication token
-            const tokenResponse = await httpClient.get("token/new");
+            const tokenResponse = await this.httpClient.get("token/new");
             if (tokenResponse.status !== 200)
                 throw new Error("Failed to get token");
 
             this.token = tokenResponse.data;
-            httpClient.defaults.headers[
+            this.httpClient.defaults.headers[
                 "Authorization"
             ] = `Bearer ${this.token}`;
 
             // Get StudentID
-            const studentResponse = await httpClient.get(
+            const studentResponse = await this.httpClient.get(
                 "rest/view/v1/app/data"
             );
             if (studentResponse.status !== 200)
@@ -127,7 +129,7 @@ export class UntisSession {
                 `https://${this.server}.webuntis.com/WebUntis/saml/logout`,
                 {
                     headers: {
-                        Cookie: httpClient.defaults.headers["Cookie"],
+                        Cookie: this.httpClient.defaults.headers["Cookie"],
                         Accept: "application/json",
                     },
                 }
@@ -162,7 +164,7 @@ export class UntisSession {
                 return d.toISOString().split("T")[0];
             };
 
-            const response = await httpClient.get(
+            const response = await this.httpClient.get(
                 `rest/view/v1/timetable/entries?start=${formatDate(
                     startDate
                 )}&end=${formatDate(
@@ -189,7 +191,7 @@ export class UntisSession {
                 return parseInt(`${year}${month}${day}`, 10);
             };
 
-            const examResponse = await httpClient.get<{
+            const examResponse = await this.httpClient.get<{
                 data: Exam[];
             }>(
                 `exams?startDate=${dateToNumber(
