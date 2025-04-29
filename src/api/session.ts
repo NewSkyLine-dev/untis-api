@@ -1,6 +1,6 @@
-import { Exam, Timetable } from "@/models/timetable";
-import { getHttpClient } from "@/utils/httpClient";
-import { logger } from "@/utils/logger";
+import { Exam, Timetable } from "../models/timetable.js";
+import { getHttpClient } from "../utils/httpClient.js";
+import { logger } from "../utils/logger.js";
 import axios from "axios";
 
 export class UntisSession {

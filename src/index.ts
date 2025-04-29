@@ -1,4 +1,4 @@
-import { UntisSession } from "./api/session";
+import { UntisSession } from "./api/session.js";
 import {
     Timetable,
     Resource,
@@ -9,7 +9,7 @@ import {
     Exam,
     AssignedStudent,
     Klasse,
-} from "./models/timetable";
+} from "./models/timetable.js";
 
 export { UntisSession };
 export type {

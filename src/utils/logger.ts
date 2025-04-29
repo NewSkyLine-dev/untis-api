@@ -1,5 +1,3 @@
-import { error, info } from "console";
-
 export const logger = {
     info: (message: string) => {
         const date = new Date().toISOString();
