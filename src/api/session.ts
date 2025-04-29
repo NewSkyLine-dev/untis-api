@@ -64,7 +64,9 @@ export class UntisSession {
                 {
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
-                        Cookie: httpClient.defaults.headers["Cookie"],
+                        Cookie:
+                            httpClient.defaults.headers["Cookie"] +
+                            `; JSESSIONID=${this.sessionId}`,
                         Accept: "application/json",
                     },
                 }
@@ -177,7 +179,7 @@ export class UntisSession {
         }
     }
 
-    async getExams(): Promise<any> {
+    async getExams(): Promise<Exam[]> {
         try {
             const dateToNumber = (date: Date) => {
                 const year = date.getFullYear();
