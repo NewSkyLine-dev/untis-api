@@ -1,20 +1,18 @@
 {
     "compilerOptions": {
         // Language and Environment
-        "target": "ES2024",
-        "lib": ["ES2024", "DOM", "DOM.Iterable"],
-        "jsx": "react-jsx",
+        "target": "ES2022",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
         "useDefineForClassFields": true,
         "experimentalDecorators": true,
 
         // Modules
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "ES2022",
+        "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]
         },
-        "resolveJsonModule": true,
 
         // Emit
         "declaration": true,
