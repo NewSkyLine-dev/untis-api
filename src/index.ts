@@ -1,4 +1,4 @@
-import { UntisSession } from "./api/session.js";
+import { UntisSession } from "./api/session";
 import {
     Timetable,
     Resource,

@@ -1,6 +1,6 @@
-import { Exam, Timetable } from "../models/timetable.js";
-import { getHttpClient } from "../utils/httpClient.js";
-import { logger } from "../utils/logger.js";
+import { Exam, Timetable } from "../models/timetable";
+import { createHttpClient } from "../utils/httpClient";
+import { logger } from "../utils/logger";
 import axios from "axios";
 
 export class UntisSession {
@@ -10,7 +10,7 @@ export class UntisSession {
     private studentId: string | null = null;
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
-    private httpClient: ReturnType<typeof getHttpClient>;
+    private httpClient: ReturnType<typeof createHttpClient>;
 
     constructor(
         private server: string,
@@ -19,7 +19,7 @@ export class UntisSession {
         private password: string
     ) {
         this.baseUrl = `https://${server}.webuntis.com/WebUntis/api/`;
-        this.httpClient = getHttpClient();
+        this.httpClient = createHttpClient(this.baseUrl, school);
         this.httpClient.defaults.baseURL = this.baseUrl;
         this.httpClient.defaults.headers["Content-Type"] = "application/json";
         this.httpClient.defaults.headers["Cookie"] = `schoolname=_${Buffer.from(
