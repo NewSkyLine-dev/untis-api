@@ -1,7 +1,7 @@
 import { Exam, Timetable } from "../models/timetable";
 import { createHttpClient } from "../utils/httpClient";
 import { logger } from "../utils/logger";
-import axios from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
 export class UntisSession {
     private baseUrl: string;
@@ -10,8 +10,8 @@ export class UntisSession {
     private studentId: string | null = null;
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
-    private cookies: string = ""; // Add this line
-    private httpClient: ReturnType<typeof createHttpClient>;
+    private cookieStore: Map<string, string> = new Map();
+    private httpClient: AxiosInstance;
 
     constructor(
         private server: string,
@@ -21,20 +21,42 @@ export class UntisSession {
     ) {
         this.baseUrl = `https://${server}.webuntis.com/WebUntis/api/`;
         this.httpClient = createHttpClient(this.baseUrl, school);
-        this.httpClient.interceptors.request.use((config) => {
-            if (this.token) {
-                config.headers.Authorization = `Bearer ${this.token}`;
-            }
+    }
 
-            config.headers.Cookie = [
-                this.httpClient.defaults.headers["Cookie"],
-                `JSESSIONID=${this.sessionId}`,
-                this.cookies,
-            ]
-                .filter(Boolean)
-                .join("; ");
-            return config;
+    private processSetCookieHeaders(setCookies?: string[]): void {
+        if (!setCookies) return;
+
+        setCookies.forEach((cookieStr) => {
+            const match = cookieStr.match(/^([^=]+)=([^;]*)/);
+            if (match) {
+                const [, name, value] = match;
+                this.cookieStore.set(name, value);
+            }
         });
+    }
+
+    private buildCookieHeader(): string {
+        const cookies = Array.from(this.cookieStore.entries())
+            .map(([name, value]) => `${name}=${value}`)
+            .join("; ");
+        return cookies;
+    }
+
+    private getRequestConfig(): AxiosRequestConfig {
+        const config: AxiosRequestConfig = {
+            headers: {
+                Cookie: this.buildCookieHeader(),
+            },
+        };
+
+        if (this.token) {
+            config.headers = {
+                ...config.headers,
+                Authorization: `Bearer ${this.token}`,
+            };
+        }
+
+        return config;
     }
 
     async login(): Promise<void> {
@@ -53,6 +75,9 @@ export class UntisSession {
                 jSessionIdResponse.status === 200 &&
                 jSessionIdResponse.headers["set-cookie"]
             ) {
+                this.processSetCookieHeaders(
+                    jSessionIdResponse.headers["set-cookie"]
+                );
                 const sessionCookie = jSessionIdResponse.headers[
                     "set-cookie"
                 ].find((cookie: string) => cookie.startsWith("JSESSIONID"));
@@ -60,6 +85,7 @@ export class UntisSession {
                 if (sessionCookie) {
                     this.sessionId =
                         sessionCookie.split(";")[0]?.split("=")[1] || null;
+                    this.cookieStore.set("JSESSIONID", this.sessionId!);
                 }
             }
 
@@ -76,9 +102,7 @@ export class UntisSession {
                 {
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
-                        Cookie:
-                            this.httpClient.defaults.headers["Cookie"] +
-                            `; JSESSIONID=${this.sessionId}`,
+                        Cookie: this.buildCookieHeader(),
                         Accept: "application/json",
                     },
                 }
@@ -86,30 +110,26 @@ export class UntisSession {
 
             if (loginResponse.status !== 200) throw new Error("Login failed");
 
-            // Process cookies
-            const setCookies = loginResponse.headers["set-cookie"];
-            if (setCookies) {
-                this.cookies = setCookies.reduce((acc, cookie) => {
-                    const match = cookie.match(/^([^=]+=[^;]*)/);
-                    return match?.[1]
-                        ? acc
-                            ? `${acc}; ${match[1]}`
-                            : match[1]
-                        : acc;
-                }, "");
-            }
+            // Process cookies from login response
+            this.processSetCookieHeaders(loginResponse.headers["set-cookie"]);
 
             // Get authentication token
-            const tokenResponse = await this.httpClient.get("token/new");
+            const tokenResponse = await axios.get(
+                `${this.baseUrl}token/new`,
+                this.getRequestConfig()
+            );
+
             if (tokenResponse.status !== 200)
                 throw new Error("Failed to get token");
 
             this.token = tokenResponse.data;
 
             // Get StudentID
-            const studentResponse = await this.httpClient.get(
-                "rest/view/v1/app/data"
+            const studentResponse = await axios.get(
+                `${this.baseUrl}rest/view/v1/app/data`,
+                this.getRequestConfig()
             );
+
             if (studentResponse.status !== 200)
                 throw new Error("Failed to get student ID");
 
@@ -130,15 +150,11 @@ export class UntisSession {
         try {
             const response = await axios.get(
                 `https://${this.server}.webuntis.com/WebUntis/saml/logout`,
-                {
-                    headers: {
-                        Cookie: this.httpClient.defaults.headers["Cookie"],
-                        Accept: "application/json",
-                    },
-                }
+                this.getRequestConfig()
             );
 
             if (response.status !== 200) throw new Error("Logout failed");
+            this.cookieStore.clear();
             logger.info("Logged out successfully");
         } catch (error) {
             logger.error("Error logging out");
@@ -167,13 +183,15 @@ export class UntisSession {
                 return d.toISOString().split("T")[0];
             };
 
-            const response = await this.httpClient.get(
-                `rest/view/v1/timetable/entries?start=${formatDate(
-                    startDate
-                )}&end=${formatDate(
-                    endDate
-                )}&format=2&resourceType=STUDENT&resources=6110&periodTypes=&timetableType=MY_TIMETABLE`
-            );
+            const url = `${
+                this.baseUrl
+            }rest/view/v1/timetable/entries?start=${formatDate(
+                startDate
+            )}&end=${formatDate(
+                endDate
+            )}&format=2&resourceType=STUDENT&resources=6110&periodTypes=&timetableType=MY_TIMETABLE`;
+
+            const response = await axios.get(url, this.getRequestConfig());
 
             if (response.status !== 200)
                 throw new Error("Failed to get timetable");
@@ -188,21 +206,21 @@ export class UntisSession {
         try {
             const dateToNumber = (date: Date) => {
                 const year = date.getFullYear();
-                const month = (date.getMonth() + 1).toString().padStart(2, "0"); // +1 because months are 0-indexed
+                const month = (date.getMonth() + 1).toString().padStart(2, "0");
                 const day = date.getDate().toString().padStart(2, "0");
 
                 return parseInt(`${year}${month}${day}`, 10);
             };
 
-            const examResponse = await this.httpClient.get<{
+            const url = `${this.baseUrl}exams?startDate=${dateToNumber(
+                this.yearStart!
+            )}&endDate=${dateToNumber(this.yearEnd!)}&studentId=${
+                this.studentId
+            }&withGrades=true&klasseId=-1`;
+
+            const examResponse = await axios.get<{
                 data: Exam[];
-            }>(
-                `exams?startDate=${dateToNumber(
-                    this.yearStart!
-                )}&endDate=${dateToNumber(this.yearEnd!)}&studentId=${
-                    this.studentId
-                }&withGrades=true&klasseId=-1`
-            );
+            }>(url, this.getRequestConfig());
 
             if (examResponse.status !== 200)
                 throw new Error("Failed to get exams");
