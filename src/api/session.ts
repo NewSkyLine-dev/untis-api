@@ -10,6 +10,7 @@ export class UntisSession {
     private studentId: string | null = null;
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
+    private cookies: string = ""; // Add this line
     private httpClient: ReturnType<typeof createHttpClient>;
 
     constructor(
@@ -20,11 +21,20 @@ export class UntisSession {
     ) {
         this.baseUrl = `https://${server}.webuntis.com/WebUntis/api/`;
         this.httpClient = createHttpClient(this.baseUrl, school);
-        this.httpClient.defaults.baseURL = this.baseUrl;
-        this.httpClient.defaults.headers["Content-Type"] = "application/json";
-        this.httpClient.defaults.headers["Cookie"] = `schoolname=_${Buffer.from(
-            school
-        ).toString("base64")}`;
+        this.httpClient.interceptors.request.use((config) => {
+            if (this.token) {
+                config.headers.Authorization = `Bearer ${this.token}`;
+            }
+
+            config.headers.Cookie = [
+                this.httpClient.defaults.headers["Cookie"],
+                `JSESSIONID=${this.sessionId}`,
+                this.cookies,
+            ]
+                .filter(Boolean)
+                .join("; ");
+            return config;
+        });
     }
 
     async login(): Promise<void> {
@@ -79,7 +89,7 @@ export class UntisSession {
             // Process cookies
             const setCookies = loginResponse.headers["set-cookie"];
             if (setCookies) {
-                const cookies = setCookies.reduce((acc, cookie) => {
+                this.cookies = setCookies.reduce((acc, cookie) => {
                     const match = cookie.match(/^([^=]+=[^;]*)/);
                     return match?.[1]
                         ? acc
@@ -87,10 +97,6 @@ export class UntisSession {
                             : match[1]
                         : acc;
                 }, "");
-
-                this.httpClient.defaults.headers[
-                    "Cookie"
-                ] = `${cookies}; JSESSIONID=${this.sessionId}`;
             }
 
             // Get authentication token
@@ -99,9 +105,6 @@ export class UntisSession {
                 throw new Error("Failed to get token");
 
             this.token = tokenResponse.data;
-            this.httpClient.defaults.headers[
-                "Authorization"
-            ] = `Bearer ${this.token}`;
 
             // Get StudentID
             const studentResponse = await this.httpClient.get(
