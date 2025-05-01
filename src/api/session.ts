@@ -1,7 +1,6 @@
 import { Exam, Timetable } from "../models/timetable";
-import { createHttpClient } from "../utils/httpClient";
 import { logger } from "../utils/logger";
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 export class UntisSession {
     private baseUrl: string;
@@ -11,7 +10,6 @@ export class UntisSession {
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
     private cookieStore: Map<string, string> = new Map();
-    private httpClient: AxiosInstance;
 
     constructor(
         private server: string,
@@ -20,7 +18,6 @@ export class UntisSession {
         private password: string
     ) {
         this.baseUrl = `https://${server}.webuntis.com/WebUntis/api/`;
-        this.httpClient = createHttpClient(this.baseUrl, school);
     }
 
     private processSetCookieHeaders(setCookies?: string[]): void {
@@ -48,6 +45,12 @@ export class UntisSession {
                 Cookie: this.buildCookieHeader(),
             },
         };
+        if (this.sessionId) {
+            config.headers = {
+                ...config.headers,
+                JSESSIONID: this.sessionId,
+            };
+        }
 
         if (this.token) {
             config.headers = {
@@ -165,7 +168,7 @@ export class UntisSession {
     async getOwnTimetableForRange(
         start: Date,
         end: Date
-    ): Promise<{ days: Timetable[] }> {
+    ): Promise<{ days: Array<Timetable> }> {
         try {
             // Adjust dates to Monday and Saturday
             const startDate = new Date(start);
@@ -202,7 +205,7 @@ export class UntisSession {
         }
     }
 
-    async getExams(): Promise<Exam[]> {
+    async getExams(): Promise<Array<Exam>> {
         try {
             const dateToNumber = (date: Date) => {
                 const year = date.getFullYear();
@@ -218,14 +221,12 @@ export class UntisSession {
                 this.studentId
             }&withGrades=true&klasseId=-1`;
 
-            const examResponse = await axios.get<{
-                data: Exam[];
-            }>(url, this.getRequestConfig());
+            const examResponse = await axios.get(url, this.getRequestConfig());
 
             if (examResponse.status !== 200)
                 throw new Error("Failed to get exams");
 
-            return examResponse.data.data;
+            return examResponse.data.data.exams as Array<Exam>;
         } catch (error: any) {
             logger.error(`Error getting exams: ${error}`);
             throw new Error("Failed to get exams");
