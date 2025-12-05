@@ -224,27 +224,48 @@ export class UntisSession {
             const endDay = endDate.getDay();
             if (endDay !== 6) endDate.setDate(endDate.getDate() + (6 - endDay));
 
-            // Format dates as YYYY-MM-DD
             const formatDate = (date: Date) => {
                 const d = new Date(date);
                 return d.toISOString().split("T")[0];
             };
 
-            const url = `${
-                this.baseUrl
-            }rest/view/v1/timetable/entries?start=${formatDate(
-                startDate
-            )}&end=${formatDate(
-                endDate
-            )}&format=2&resourceType=STUDENT&resources=${
-                this.studentId
-            }&periodTypes=&timetableType=MY_TIMETABLE`;
+            const fetchRange = async (
+                from: Date,
+                to: Date
+            ): Promise<{ days: Array<Timetable> }> => {
+                const url = `${
+                    this.baseUrl
+                }rest/view/v1/timetable/entries?start=${formatDate(
+                    from
+                )}&end=${formatDate(
+                    to
+                )}&format=2&resourceType=STUDENT&resources=${
+                    this.studentId
+                }&periodTypes=&timetableType=MY_TIMETABLE`;
 
-            const response = await axios.get(url, this.getRequestConfig());
+                const response = await axios.get(url, this.getRequestConfig());
 
-            if (response.status !== 200)
-                throw new Error("Failed to get timetable");
-            return response.data;
+                if (response.status !== 200)
+                    throw new Error("Failed to get timetable");
+                return response.data;
+            };
+
+            // WebUntis rejects very long ranges; split into 28-day chunks
+            const days: Array<Timetable> = [];
+            let cursor = new Date(startDate);
+            while (cursor <= endDate) {
+                const chunkEnd = new Date(cursor);
+                chunkEnd.setDate(chunkEnd.getDate() + 27);
+                if (chunkEnd > endDate) chunkEnd.setTime(endDate.getTime());
+
+                const data = await fetchRange(cursor, chunkEnd);
+                if (data?.days) days.push(...data.days);
+
+                cursor = new Date(chunkEnd);
+                cursor.setDate(cursor.getDate() + 1);
+            }
+
+            return { days };
         } catch (error: any) {
             logger.error(`Error getting timetable: ${error}`);
             throw new Error("Failed to get timetable");
