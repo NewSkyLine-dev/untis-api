@@ -4,10 +4,10 @@ import { UntisSession } from "../src";
 describe("login", () => {
     it("should login and logout successfully", async () => {
         const session = new UntisSession(
-            "nete",
+            "htlwrn",
             "htlwrn",
             "20210235",
-            "Birnenapfel-2006$"
+            "Birnenapfel-2006$!"
         );
 
         await expect(session.login()).resolves.toBeUndefined();
@@ -18,10 +18,10 @@ describe("login", () => {
 describe("getTimetableForRange", () => {
     it("should get timetable for range successfully", async () => {
         const session = new UntisSession(
-            "nete",
+            "htlwrn",
             "htlwrn",
             "20210235",
-            "Birnenapfel-2006$"
+            "Birnenapfel-2006$!"
         );
 
         await expect(session.login()).resolves.toBeUndefined();
@@ -40,10 +40,10 @@ describe("getTimetableForRange", () => {
 describe("getExams", () => {
     it("should get timetable for range successfully", async () => {
         const session = new UntisSession(
-            "nete",
+            "htlwrn",
             "htlwrn",
             "20210235",
-            "Birnenapfel-2006$"
+            "Birnenapfel-2006$!"
         );
 
         await expect(session.login()).resolves.toBeUndefined();

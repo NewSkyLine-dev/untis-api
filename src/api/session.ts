@@ -9,6 +9,8 @@ export class UntisSession {
     private studentId: string | null = null;
     private yearStart: Date | null = null;
     private yearEnd: Date | null = null;
+    private csrfToken: string | null = null;
+    private tenantId: string | null = null;
     private cookieStore: Map<string, string> = new Map();
 
     constructor(
@@ -28,6 +30,10 @@ export class UntisSession {
             if (match) {
                 const [, name, value] = match;
                 this.cookieStore.set(name, value);
+
+                if (name.toLowerCase() === "tenant-id") {
+                    this.tenantId = value.replace(/"/g, "");
+                }
             }
         });
     }
@@ -45,12 +51,6 @@ export class UntisSession {
                 Cookie: this.buildCookieHeader(),
             },
         };
-        if (this.sessionId) {
-            config.headers = {
-                ...config.headers,
-                JSESSIONID: this.sessionId,
-            };
-        }
 
         if (this.token) {
             config.headers = {
@@ -59,7 +59,27 @@ export class UntisSession {
             };
         }
 
+        if (this.tenantId) {
+            config.headers = {
+                ...config.headers,
+                "Tenant-Id": this.tenantId,
+            };
+        }
+
         return config;
+    }
+
+    private extractCsrfToken(html?: string): void {
+        if (!html) return;
+        const match = html.match(/name="_csrf" value="([^"]+)"/);
+        if (match) {
+            this.csrfToken = match[1];
+        }
+
+        const metaMatch = html.match(/name="csrf-token" content="([^"]+)"/);
+        if (!this.csrfToken && metaMatch) {
+            this.csrfToken = metaMatch[1];
+        }
     }
 
     async login(): Promise<void> {
@@ -70,9 +90,15 @@ export class UntisSession {
                 {
                     headers: {
                         Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+                        "Accept-Language":
+                            "de-AT,de-DE;q=0.9,de;q=0.8,en-US;q=0.7,en;q=0.6",
+                        "User-Agent":
+                            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
                     },
                 }
             );
+
+            this.extractCsrfToken(jSessionIdResponse.data);
 
             if (
                 jSessionIdResponse.status === 200 &&
@@ -107,6 +133,18 @@ export class UntisSession {
                         "Content-Type": "application/x-www-form-urlencoded",
                         Cookie: this.buildCookieHeader(),
                         Accept: "application/json",
+                        Origin: `https://${this.server}.webuntis.com`,
+                        Referer: `https://${this.server}.webuntis.com/WebUntis/`,
+                        "Accept-Language":
+                            "de-AT,de-DE;q=0.9,de;q=0.8,en-US;q=0.7,en;q=0.6",
+                        "User-Agent":
+                            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+                        ...(this.csrfToken
+                            ? { "X-CSRF-TOKEN": this.csrfToken }
+                            : {}),
+                        ...(this.tenantId
+                            ? { "Tenant-Id": this.tenantId }
+                            : {}),
                     },
                 }
             );
@@ -117,10 +155,14 @@ export class UntisSession {
             this.processSetCookieHeaders(loginResponse.headers["set-cookie"]);
 
             // Get authentication token
-            const tokenResponse = await axios.get(
-                `${this.baseUrl}token/new`,
-                this.getRequestConfig()
-            );
+            const tokenConfig = this.getRequestConfig();
+            const tokenResponse = await axios.get(`${this.baseUrl}token/new`, {
+                ...tokenConfig,
+                headers: {
+                    ...tokenConfig.headers,
+                    Referer: `https://${this.server}.webuntis.com/`,
+                },
+            });
 
             if (tokenResponse.status !== 200)
                 throw new Error("Failed to get token");
@@ -170,6 +212,8 @@ export class UntisSession {
         end: Date
     ): Promise<{ days: Array<Timetable> }> {
         try {
+            if (!this.studentId) throw new Error("Not logged in");
+
             // Adjust dates to Monday and Saturday
             const startDate = new Date(start);
             const startDay = startDate.getDay();
@@ -192,7 +236,9 @@ export class UntisSession {
                 startDate
             )}&end=${formatDate(
                 endDate
-            )}&format=2&resourceType=STUDENT&resources=6110&periodTypes=&timetableType=MY_TIMETABLE`;
+            )}&format=2&resourceType=STUDENT&resources=${
+                this.studentId
+            }&periodTypes=&timetableType=MY_TIMETABLE`;
 
             const response = await axios.get(url, this.getRequestConfig());
 
@@ -207,6 +253,9 @@ export class UntisSession {
 
     async getExams(): Promise<Array<Exam>> {
         try {
+            if (!this.studentId || !this.yearStart || !this.yearEnd)
+                throw new Error("Not logged in");
+
             const dateToNumber = (date: Date) => {
                 const year = date.getFullYear();
                 const month = (date.getMonth() + 1).toString().padStart(2, "0");
